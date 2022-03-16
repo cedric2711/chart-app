@@ -1,0 +1,28 @@
+{
+    "linechart": {
+        "name": "Line Chart",
+        "types": [
+            {
+                "name": "Simple Line Chart",
+                "data": "set1"
+            },
+            {
+                "name": "Tiny Line Chart",
+                "data": "set1"
+            }
+        ]
+    },
+    "areachart": {
+        "name": "Area Chart",
+        "types": [
+            {
+                "name": "Simple Area Chart",
+                "data": "set1"
+            },
+            {
+                "name": "Tiny Area Chart",
+                "data": "set1"
+            }
+        ]
+    }
+}
