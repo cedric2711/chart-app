@@ -24,5 +24,14 @@
                 "data": "set1"
             }
         ]
+    },
+    "barchart": {
+        "name": "Bar Chart",
+        "types": [
+            {
+                "name": "Simple Bar Chart",
+                "data": "set2"
+            }
+        ]
     }
 }

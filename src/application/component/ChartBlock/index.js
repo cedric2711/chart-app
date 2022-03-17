@@ -7,6 +7,7 @@ import SimpleLineChart from "../charts/SimpleLineChart";
 import TinyLineChart from "../charts/TinyLineCart";
 import SimpleAreaChart from "../charts/SimpleAreaChart";
 import TinyAreaChart from "../charts/TinyAreaChart";
+import SimpleBarChart from "../charts/SimpleBarChart";
 
 const selectChart = (chartData, chart) => {
     switch(chart) {
@@ -17,7 +18,9 @@ const selectChart = (chartData, chart) => {
         case "Simple Area Chart":
             return <SimpleAreaChart data = {chartData} />
         case "Tiny Area Chart":
-            return <TinyAreaChart data = {chartData} />    
+            return <TinyAreaChart data = {chartData} />   
+        case "Simple Bar Chart":
+            return <SimpleBarChart data = {chartData} />    
         default:
             return null;
     }
