@@ -1,5 +1,5 @@
 ### About
-This is a simple react project to implement a charting library
+This is a simple react project to implement a charting library.
 To view the bar chart with filter, click the first link in the navigation.
 
 # Getting Started with Create React App
