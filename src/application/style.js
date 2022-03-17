@@ -27,14 +27,13 @@ export const StyledFooter = styled.footer`
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  height: 100px;
+  height: 50px;
   background-color: #A16D8D;
   align-items: center;
 `;
 
 export const StyledMain = styled.main`
-  height: 755px;
-
+  height: 855px;
   width: 100%;
   display: flex;
   justify-content: flex-start;

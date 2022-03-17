@@ -3,8 +3,10 @@ import React from "react";
 
 // Dependency
 import { StyledNav, StyledUl, StyledLi } from "./style";
+import DropDowns from "../DropDowns";
 
-function Navigation({ chartData, chartType }) {
+function Navigation({ chartData, chartType, chartHasFilter,filterContent={}, setFilter }) {
+    const { statusArr, issue_typeArr, priorityArr, ticketStatus, ticketIssueType, ticketPriority} =filterContent;
     return (
         <StyledNav>
             <StyledUl>
@@ -18,9 +20,9 @@ function Navigation({ chartData, chartType }) {
                                 <div>{name}</div>
                                 <StyledUl>
                                     {
-                                        types.map(({ name, data }) => {
+                                        types.map(({ name, data, hasFilters }) => {
                                             return (
-                                                <StyledLi key={name} onClick={()=>chartType(name, data)}>{name}</StyledLi>
+                                                <StyledLi key={name} onClick={()=>chartType(name, data, hasFilters)}>{name}</StyledLi>
                                             )
                                         })
                                     }
@@ -30,6 +32,30 @@ function Navigation({ chartData, chartType }) {
                     })
                 }
             </StyledUl>
+            {
+                // Filter section
+                chartHasFilter? 
+                <StyledUl>
+                    <StyledLi>
+                        <h2>Filters</h2>
+                    </StyledLi>
+                    <StyledLi>
+                        <DropDowns data={statusArr} label="Status" curValue = {ticketStatus} setFilter ={setFilter}/>
+                    </StyledLi>
+                    <StyledLi>
+                        <DropDowns data={issue_typeArr} label="Issue Type" curValue = {ticketIssueType} setFilter ={setFilter}/>
+                    </StyledLi>
+                    <StyledLi>
+                        <DropDowns data={priorityArr} label="Priority" curValue = {ticketPriority} setFilter ={setFilter}/>
+                    </StyledLi>
+                    <StyledLi>
+                        <button onClick={(event)=>setFilter(event,"clear")}>Clear All</button>
+                    </StyledLi>
+                </StyledUl>
+                :
+                null
+            }
+            
         </StyledNav>
     );
 }

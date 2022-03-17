@@ -1,4 +1,14 @@
 {
+    "barchart": {
+        "name": "Bar Chart for Propelo",
+        "types": [
+            {
+                "name": "Simple Bar Chart",
+                "data": "set2",
+                "hasFilters":true
+            }
+        ]
+    },
     "linechart": {
         "name": "Line Chart",
         "types": [
@@ -22,15 +32,6 @@
             {
                 "name": "Tiny Area Chart",
                 "data": "set1"
-            }
-        ]
-    },
-    "barchart": {
-        "name": "Bar Chart",
-        "types": [
-            {
-                "name": "Simple Bar Chart",
-                "data": "set2"
             }
         ]
     }
