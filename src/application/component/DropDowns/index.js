@@ -5,7 +5,6 @@ import React from "react";
 import { StyledLabel, StyledSelect } from "./style";
 
 function SimpleDropDown ({data, label, setFilter, curValue}) {
-
     return( data.length?
         <>
         <StyledLabel htmlFor={label}>{label}</StyledLabel>

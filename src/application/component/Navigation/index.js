@@ -6,7 +6,7 @@ import { StyledNav, StyledUl, StyledLi } from "./style";
 import DropDowns from "../DropDowns";
 
 function Navigation({ chartData, chartType, chartHasFilter,filterContent={}, setFilter }) {
-    const { statusArr, issue_typeArr, priorityArr, ticketStatus, ticketIssueType, ticketPriority} =filterContent;
+    const { statusArr, issue_typeArr, priorityArr, dateArr, ticketStatus, ticketIssueType, ticketPriority, ticketDate} =filterContent;
     return (
         <StyledNav>
             <StyledUl>
@@ -47,6 +47,9 @@ function Navigation({ chartData, chartType, chartHasFilter,filterContent={}, set
                     </StyledLi>
                     <StyledLi>
                         <DropDowns data={priorityArr} label="Priority" curValue = {ticketPriority} setFilter ={setFilter}/>
+                    </StyledLi>
+                    <StyledLi>
+                        <DropDowns data={dateArr} label="Date" curValue = {ticketDate} setFilter ={setFilter}/>
                     </StyledLi>
                     <StyledLi>
                         <button onClick={(event)=>setFilter(event,"clear")}>Clear All</button>
